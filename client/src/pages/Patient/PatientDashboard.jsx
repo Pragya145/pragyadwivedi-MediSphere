@@ -9,7 +9,7 @@ function PatientDashboard() {
   return (
     <>
       <div className="welcome">
-        <h1>Good Morning 👋</h1>
+        <h3>Dashboard</h3>
 
         <p>Manage your health journey with MediSphere</p>
       </div>

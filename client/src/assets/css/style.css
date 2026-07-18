@@ -139,8 +139,10 @@
   margin-top: 25px;
   width: 100%;
   height: var(--btn-height);
+  max-height: 40px;
   padding: 0 var(--btn-padding-x);
   font-size: var(--btn-font-size);
+  border-radius: var(--btn-radius);
 }
 
 .switch-login {
@@ -364,9 +366,37 @@
   width: auto;
   align-self: flex-start;
   height: var(--btn-height);
+  max-height: 40px;
   padding: 0 var(--btn-padding-x);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-medium);
+  border-radius: var(--btn-radius);
+}
+
+.appointment-form button[type='submit'] {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.appointment-form button[type='button'] {
+  background-color: var(--color-card);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+/* Compact table action buttons */
+.appointment-table td button,
+table td button {
+  margin-top: 0;
+  width: auto;
+  min-width: 0;
+}
+
+.appointment-table td .btn,
+table td .btn {
+  margin-top: 0;
+  width: auto;
 }
 
 /* ------------------------------------------------------------
@@ -454,7 +484,10 @@
 .profile-card button {
   margin-top: 20px;
   width: auto;
+  min-width: 140px;
   height: var(--btn-height);
+  max-height: 40px;
   padding: 0 var(--btn-padding-x);
   font-size: var(--btn-font-size);
+  border-radius: var(--btn-radius);
 }
