@@ -27,6 +27,7 @@ import Prescription from "./pages/Doctor/Prescription";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import ManageDoctors from "./pages/Admin/ManageDoctors";
 import ManagePatients from "./pages/Admin/ManagePatients";
+import Appointments from "./pages/Admin/Appointments";
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="doctors" element={<ManageDoctors />} />
           <Route path="patients" element={<ManagePatients />} />
+          <Route path="appointments" element={<Appointments />} />
         </Route>
 
       </Routes>

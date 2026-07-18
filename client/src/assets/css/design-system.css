@@ -1,0 +1,409 @@
+/* ============================================================
+   MediSphere Design System
+   Reusable tokens and component styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ------------------------------------------------------------
+   Color Palette & Design Tokens
+   ------------------------------------------------------------ */
+:root {
+  /* Colors */
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-light: #EFF6FF;
+  --color-background: #F8FAFC;
+  --color-card: #FFFFFF;
+  --color-success: #22C55E;
+  --color-success-dark: #16A34A;
+  --color-warning: #F59E0B;
+  --color-warning-dark: #D97706;
+  --color-danger: #EF4444;
+  --color-danger-hover: #DC2626;
+  --color-text: #1E293B;
+  --color-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-border-focus: #2563EB;
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+
+  /* Borders & Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Component sizing */
+  --input-height: 2.75rem;
+  --btn-height: 2.5rem;
+  --btn-padding-x: 1.25rem;
+  --btn-font-size: 0.875rem;
+}
+
+/* ------------------------------------------------------------
+   Typography
+   ------------------------------------------------------------ */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+h5 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-muted);
+}
+
+p {
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+/* ------------------------------------------------------------
+   Buttons
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  height: var(--btn-height);
+  padding: 0 var(--btn-padding-x);
+  font-family: var(--font-family);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--color-card);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-background);
+  border-color: var(--color-muted);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-danger:hover {
+  background-color: var(--color-danger-hover);
+  border-color: var(--color-danger-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Default button element — primary variant visuals */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   Input Fields
+   ------------------------------------------------------------ */
+input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  height: var(--input-height);
+  padding: 0 var(--space-md);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+textarea {
+  height: auto;
+  min-height: 6rem;
+  padding: var(--space-md);
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+input:not([type='checkbox']):not([type='radio']):focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
+}
+
+/* ------------------------------------------------------------
+   Tables
+   ------------------------------------------------------------ */
+table,
+.table {
+  width: 100%;
+  margin-top: var(--space-lg);
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+table thead,
+.table thead {
+  background-color: var(--color-primary);
+}
+
+table th,
+.table th {
+  padding: 0.875rem 1rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+  color: #FFFFFF;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+
+table td,
+.table td {
+  padding: 0.875rem 1rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
+}
+
+table tbody tr:last-child td,
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table tbody tr:nth-child(even),
+.table tbody tr:nth-child(even) {
+  background-color: var(--color-background);
+}
+
+table tbody tr:hover,
+.table tbody tr:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* ------------------------------------------------------------
+   Cards
+   ------------------------------------------------------------ */
+.ds-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+}
+
+/* ------------------------------------------------------------
+   Status Badges
+   ------------------------------------------------------------ */
+.status {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  border-radius: var(--radius-full);
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.confirmed {
+  background-color: var(--color-success);
+}
+
+.pending {
+  background-color: var(--color-warning);
+  color: var(--color-text);
+}
+
+.completed {
+  background-color: var(--color-primary);
+}
