@@ -28,6 +28,7 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 import ManageDoctors from "./pages/Admin/ManageDoctors";
 import ManagePatients from "./pages/Admin/ManagePatients";
 import Appointments from "./pages/Admin/Appointments";
+import Reports from "./pages/Admin/Reports";
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
           <Route path="doctors" element={<ManageDoctors />} />
           <Route path="patients" element={<ManagePatients />} />
           <Route path="appointments" element={<Appointments />} />
+          <Route path="reports" element={<Reports />} />
         </Route>
 
       </Routes>
